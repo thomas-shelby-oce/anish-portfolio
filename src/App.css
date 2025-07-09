@@ -1,0 +1,372 @@
+/* Cyberpunk 2077 Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --cyber-dark: #0a0a0a;
+  --cyber-light-dark: #1a1a1a;
+  --cyber-blue: #00bcd4; /* Primary accent blue */
+  --cyber-pink: #ff00ff; /* Secondary accent pink */
+  --cyber-green: #00ff00; /* Matrix green (for specific elements if needed) */
+  --cyber-text-light: #e0e0e0;
+  --cyber-text-dark: #a0a0a0;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--cyber-text-light);
+  background-color: var(--cyber-dark);
+  overflow-x: hidden;
+}
+
+#root > div {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--cyber-blue);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--cyber-pink);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--cyber-text-light);
+}
+
+.navbar {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+  border-bottom: 1px solid rgba(0, 188, 212, 0.3);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--cyber-blue) !important;
+  text-shadow: 0 0 5px var(--cyber-blue);
+}
+
+.nav-link {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left: 25px;
+  transition: color 0.3s ease-in-out;
+  color: var(--cyber-text-light) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--cyber-pink) !important;
+  text-shadow: 0 0 5px var(--cyber-pink);
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: var(--cyber-text-light);
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)); /* Stronger overlay for readability */
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 0 10px var(--cyber-blue), 0 0 20px var(--cyber-blue);
+}
+
+#hero h2 {
+  font-size: 36px;
+  font-family: 'Rajdhani', sans-serif;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  color: var(--cyber-pink);
+  text-shadow: 0 0 8px var(--cyber-pink);
+}
+
+/* Typing effect for subheading */
+#hero h2::after {
+  content: '|';
+  animation: blink-caret .75s step-end infinite;
+  color: var(--cyber-green);
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--cyber-green); }
+}
+
+section {
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--cyber-light-dark);
+  border-top: 1px solid rgba(0, 188, 212, 0.1);
+  border-bottom: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--cyber-dark);
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: var(--cyber-blue);
+  text-shadow: 0 0 5px var(--cyber-blue);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--cyber-pink);
+  bottom: 0;
+  left: calc(50% - 40px);
+  box-shadow: 0 0 8px var(--cyber-pink);
+}
+
+/* About Section Image Adjustment */
+#about .row {
+  align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+#about .col-lg-4 {
+  display: flex;
+  align-items: flex-start; /* Align image to the top */
+  justify-content: center;
+  /* Set a fixed height for the image column based on the text content's height */
+  /* This value might need slight adjustment based on actual content rendering */
+  height: auto; /* Let content define height initially */
+}
+
+#about .col-lg-4 img {
+  width: 100%; /* Make image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 250px; /* Limit the maximum width of the image */
+  max-height: 250px; /* Limit the maximum height of the image */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  object-position: top; /* This will make the image crop from the bottom */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+#about .col-lg-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text content */
+}
+
+/* Timeline for Experience and Education */
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: rgba(0, 188, 212, 0.3);
+  margin-left: -1px;
+  box-shadow: 0 0 5px var(--cyber-blue);
+}
+
+.timeline > li {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  display: table;
+  content: ' ';
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li .timeline-panel {
+  width: 45%;
+  float: left;
+  border: 1px solid rgba(0, 188, 212, 0.5);
+  border-radius: 8px;
+  padding: 25px;
+  position: relative;
+  background-color: rgba(26, 26, 26, 0.8);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline > li .timeline-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--cyber-pink);
+}
+
+.timeline > li.timeline-inverted + li:not(.timeline-inverted) {
+  margin-top: -60px;
+}
+
+.timeline > li:nth-child(even) .timeline-panel {
+  float: right;
+}
+
+.timeline > li .timeline-panel:before {
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid rgba(0, 188, 212, 0.5);
+  border-right: 0 solid rgba(0, 188, 212, 0.5);
+  border-bottom: 15px solid transparent;
+}
+
+.timeline > li:nth-child(even) .timeline-panel:before {
+  border-left-width: 0;
+  border-right: 15px solid rgba(0, 188, 212, 0.5);
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: var(--cyber-blue);
+  z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--cyber-blue);
+}
+
+.timeline-heading h4 {
+  margin-top: 0px;
+  color: var(--cyber-pink);
+  text-shadow: 0 0 5px var(--cyber-pink);
+}
+
+.timeline-heading p.text-muted {
+  color: var(--cyber-blue) !important;
+  text-shadow: 0 0 3px var(--cyber-blue);
+}
+
+.timeline-body > p, .timeline-body > ul {
+  margin-bottom: 0;
+  color: var(--cyber-text-dark);
+}
+
+/* Skills Section */
+.skill-item {
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--cyber-blue);
+}
+
+.skill-item img {
+  max-height: 70px;
+  filter: grayscale(100%) brightness(150%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.skill-item:hover img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+.skill-item p {
+  color: var(--cyber-text-light);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Projects Section */
+.card {
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  background-color: rgba(26, 26, 26, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--cyber-pink);
+}
+
+.card-title {
+  color: var(--cyber-blue);
+  text-shadow: 0 0 3px var(--cyber-blue);
+}
+
+.btn-primary {
+  background-color: var(--cyber-blue);
+  border-color: var(--cyber-blue);
+  box-shadow: 0 0 8px var(--cyber-blue);
+  transition: all 0.3s ease-in-out;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: var(--cyber-pink);
+  border-color: var(--cyber-pink);
+  box-shadow: 0 0 12px var(--cyber-pink);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #555;
+  border-color: #555;
+  box-shadow: 0 0 5px #555;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-secondary:hover {
+  background-color: #777;
+  border-color: #777;
+  box-shadow: 0 0 10px #777;
+  transform: scale(1.05);
+}
