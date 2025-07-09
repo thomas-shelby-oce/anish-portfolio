@@ -370,3 +370,53 @@ section:nth-of-type(even) {
   box-shadow: 0 0 10px #777;
   transform: scale(1.05);
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 80px; /* Adjust based on your sticky header height */
+  }
+
+  #hero h1 {
+    font-size: 50px;
+  }
+
+  #hero h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* Timeline for Experience and Education - Mobile */
+  .timeline:before {
+    left: 18px; /* Move vertical line to the left */
+  }
+
+  .timeline > li .timeline-panel {
+    width: calc(100% - 60px); /* Full width minus space for badge/line */
+    float: right; /* Align all panels to the right */
+    padding: 20px;
+  }
+
+  .timeline > li .timeline-panel:before {
+    border-left: 0 solid rgba(0, 188, 212, 0.5);
+    border-right: 15px solid rgba(0, 188, 212, 0.5);
+    left: -15px; /* Move arrow to the left */
+    right: auto;
+  }
+
+  .timeline > li:nth-child(even) .timeline-panel {
+    float: right; /* Ensure all panels are on the right */
+  }
+
+  .timeline > li:nth-child(even) .timeline-panel:before {
+    border-left-width: 0;
+    border-right: 15px solid rgba(0, 188, 212, 0.5);
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline > li .timeline-badge {
+    left: 18px; /* Align badge with the vertical line */
+    margin-left: 0;
+  }
+}
