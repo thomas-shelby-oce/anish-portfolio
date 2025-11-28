@@ -61,6 +61,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="achievements" smooth={true} duration={500} onClick={handleNavLinkClick}>Achievements</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="contact" smooth={true} duration={500} onClick={handleNavLinkClick}>Contact</Link>
+            </li>
           </ul>
         </div>
       </div>

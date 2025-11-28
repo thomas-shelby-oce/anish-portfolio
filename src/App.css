@@ -420,3 +420,84 @@ section:nth-of-type(even) {
     margin-left: 0;
   }
 }
+
+/* Contact Section */
+#contact {
+  background-color: var(--cyber-light-dark); /* Consistent with other sections */
+  border-top: 1px solid rgba(0, 188, 212, 0.1);
+  border-bottom: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+#contact .section-title h2 {
+  color: var(--cyber-blue); /* Ensure title color is cyber-blue */
+}
+
+#contact .cyber-text-light {
+  color: var(--cyber-text-light);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#contact .contact-link {
+  color: var(--cyber-blue);
+  text-shadow: 0 0 5px var(--cyber-blue);
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+#contact .contact-link:hover {
+  color: var(--cyber-pink);
+  text-shadow: 0 0 8px var(--cyber-pink);
+}
+
+#contact .contact-link i {
+  display: block; /* Ensure icon is block for vertical alignment with text */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+/* Contact Card Styling */
+.contact-card {
+  background-color: rgba(26, 26, 26, 0.8); /* --cyber-light-dark with transparency */
+  border: 1px solid rgba(0, 188, 212, 0.3); /* --cyber-blue with transparency */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent for default text */
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--cyber-pink); /* Glowing effect on hover */
+}
+
+.contact-card i {
+  color: var(--cyber-blue); /* Icon color */
+  text-shadow: 0 0 8px var(--cyber-blue); /* Icon glow */
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.contact-card:hover i {
+  color: var(--cyber-pink); /* Icon color on hover */
+  text-shadow: 0 0 12px var(--cyber-pink); /* Stronger icon glow on hover */
+}
+
+.contact-card .card-title {
+  color: var(--cyber-blue); /* Title color */
+  text-shadow: 0 0 3px var(--cyber-blue);
+  font-family: 'Rajdhani', sans-serif; /* Consistent font */
+}
+
+.contact-card .card-text {
+  color: var(--cyber-text-dark); /* Text color */
+  font-family: 'Share Tech Mono', monospace; /* Consistent font */
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: var(--cyber-blue);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card:hover .contact-icon {
+  color: var(--cyber-pink);
+  transform: scale(1.1);
+}

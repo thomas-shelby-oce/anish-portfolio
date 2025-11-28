@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Contact from './components/Contact'; // Import the new Contact component
 
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
         <Education />
         <Projects />
         <Achievements />
+        <Contact /> {/* Add the Contact component here */}
       </main>
     </div>
   );

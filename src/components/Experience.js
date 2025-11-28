@@ -9,11 +9,16 @@ const Experience = () => {
       company: "New Relic",
       dates: "Oct 2024 - Present",
       description: [
-        "Owned and maintained the New Relic iOS App, built using SwiftUI, leading development initiatives and ensuring code quality.",
+        "Owned and maintained the New Relic iOS App, built using SwiftUI, along with its corresponding repositories, leading development initiatives and ensuring code quality.",
         "Led the architecture and development of the new New Relic Plus App, built entirely in SwiftUI, following CLEAN architectural principles.",
-        "Managed DevOps pipelines for iOS and Android apps using Jenkins.",
-        "Led the vision and development of a Deep Link Handler to manage Universal Links.",
-        "Developed a POC for a React Native charts library, potentially reducing maintenance efforts by up to 50%."
+        "Created Low Level Designs (LLDs) and sequence diagrams to illustrate application flow at both macro and micro levels across various layers.",
+        "Led and co-developed the core data visualization features (Line, Area, and Bar Charts etc.) for iOS applications, utilizing the DGCharts library to deliver mobile friendly native charting.",
+        "Accelerated cross-platform migration of Android features to native iOS Swift using Large Language Models (Gemini, Claude, GPT).",
+        "Managed DevOps pipelines for iOS and Android apps using Jenkins on the self-hosted Grand Central infrastructure.",
+        "Led the vision and development of a Deep Link Handler to manage various Universal Links triggered by the Alerts workflow in the New Relic Platform improving their success rate from 57% to 89%.",
+        "Improved in-app analytics by building reusable SwiftUI View Modifiers and generic event handlers for common user actions.",
+        "Successfully developed a POC to use React Native for charts by leveraging the in-house Web Charts library, enabling seamless integration across iOS and Android. This approach aimed to help maintain feature parity across Web, iOS, and Android platforms, with the potential to reduce maintenance efforts by up to 50%.",
+        "Created dashboards to visualize key metrics for critical user flows such as Login, Deep Links, and Feature Session Times."
       ]
     },
     {
