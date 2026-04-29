@@ -17,6 +17,10 @@ const Skills = () => {
       skills: ["React Native", "React.js", "TypeScript", "Node.js", "Express.js", "Jest", "Reanimated"]
     },
     {
+      name: "AI Models & Tools",
+      skills: ["Claude", "Gemini", "Google AI Studio", "GPT", "MCP"]
+    },
+    {
       name: "Automation",
       skills: ["Jenkins", "Fastlane", "Shell scripts"]
     },

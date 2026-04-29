@@ -39,7 +39,7 @@ const Hero = () => {
       {/* </Fade> */}
       {/* <Fade direction="up" delay={1000}> */}
         <div className="container mt-4">
-          <p className="lead w-75 mx-auto">A passionate Software Engineer with a primary focus on Mobile Development using iOS and React Native. I thrive on building scalable, efficient applications and creating intuitive user experiences across platforms.</p>
+          <p className="lead w-75 mx-auto">A Software Engineer with 4 years of experience building mobile and web products. My core expertise is mobile development across iOS and React Native, backed by strong hands-on experience with React, frontend engineering, data visualization, DevOps automation, and AI-assisted workflows.</p>
         </div>
       {/* </Fade> */}
     </section>

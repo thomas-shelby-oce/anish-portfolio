@@ -52,9 +52,9 @@ const Contact = () => {
       <div className="container">
         <h2 className="mb-4 section-title">Contact Me</h2>
         <p className="lead cyber-text-light">Feel free to reach out to me through any of the platforms below!</p>
-        <a 
-          href="/Anish_Gupta_3.5_YOE.pdf" 
-          download="Anish_Gupta_Resume.pdf" 
+        <a
+          href={process.env.PUBLIC_URL + "/Anish_Gupta_4_YOE.pdf"}
+          download="Anish_Gupta_Resume.pdf"
           className="btn btn-primary mt-4"
         >
           Download Resume
